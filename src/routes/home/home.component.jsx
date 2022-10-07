@@ -6,28 +6,28 @@ const Home = () => {
   const categories = [
     {
       id: 1,
-      title: 'hats',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      title: 'food',
+      imageUrl: 'https://i.ibb.co/MhSrDMK/eiliv-aceron-w0-Jzq-JZYX-E-unsplash.jpg',
     },
     {
       id: 2,
-      title: 'jackets',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+      title: 'health',
+      imageUrl: 'https://i.ibb.co/Rvvr3r0/yilmaz-akin-t-UP-Toi-ZVWc-unsplash.jpg',
     },
     {
       id: 3,
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      title: 'beauty',
+      imageUrl: 'https://i.ibb.co/GPDZvw4/drew-dizzy-graham-c-TKGZJTMJQU-unsplash.jpg',
     },
     {
       id: 4,
-      title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      title: 'nutritionists',
+      imageUrl: 'https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg',
     },
     {
       id: 5,
-      title: 'mens',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      title: 'delivery',
+      imageUrl: 'https://i.ibb.co/F0FygPD/s-o-c-i-a-l-c-u-t-IW6tro-Ze-S58-unsplash.jpg',
     },
   ];
 
