@@ -7,7 +7,7 @@ import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component
 import { UserContext } from '../../contexts/user.context';
 import { CartContext, CartProvider } from '../../contexts/cart.context';
 
-import { ReactComponent as CrwnLogo } from '../../assets/hms-logo.svg';
+import { ReactComponent as HmsLogo } from '../../assets/hms-logo.svg';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
 import './navigation.styles.scss';
@@ -20,11 +20,15 @@ const Navigation = () => {
     <Fragment>
       <div className='navigation'>
         <Link className='logo-container' to='/'>
-          <CrwnLogo className='logo' />
+          <HmsLogo className='logo' />
         </Link>
         <div className='nav-links-container'>
           <Link className='nav-link' to='/shop'>
             MENUS
+          </Link>
+
+          <Link className='nav-link' to='/settings'>
+            SETTINGS
           </Link>
 
           {currentUser ? (
