@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 import Directory from '../../components/directory/directory.component';
+import NutritionistsSlider from '../../components/home/carousel/slider.component';
 
 
 const Home = () => {
@@ -35,7 +36,8 @@ const Home = () => {
   return (
     <div>
 
-
+      <NutritionistsSlider />
+      <br/><br/>
       <Directory categories={categories} />
       <Outlet />
     </div>

@@ -11,7 +11,7 @@ import Button from "../../button/button.component";
 import "./preferences-form.styles.scss";
 
 const PreferencesForm = () => {
-  const [formFields, setFormFields] = useState([]);
+  const [preference, setPreference] = useState("anything");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,12 +19,7 @@ const PreferencesForm = () => {
   };
 
   const handleChange = (event) => {
-    setFormFields((prevFormData) => {
-      return {
-        ...prevFormData,
-        [event.target.name]: event.target.value,
-      };
-    });
+    setPreference(event.target.value);
   };
 
   return (
@@ -43,7 +38,7 @@ const PreferencesForm = () => {
             <FormLabel id="demo-radio-buttons-group-label">Diet type</FormLabel>
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="female"
+              defaultValue={preference}
               name="radio-buttons-group"
             >
               <FormControlLabel
