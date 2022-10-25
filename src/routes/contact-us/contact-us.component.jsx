@@ -6,7 +6,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-function FAQ() {
+function ContactUs() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -15,8 +15,9 @@ function FAQ() {
 
   return (
     <div>
-        <label>FAQ:</label>
-        <br/><br/>
+      <label>CONTACT US:</label>
+      <br />
+      <br />
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
@@ -29,18 +30,14 @@ function FAQ() {
           <Typography sx={{ width: "33%", flexShrink: 0 }}>
             ABOUT THE MEALS
           </Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-                
-          </Typography>
+          <Typography sx={{ color: "text.secondary" }}></Typography>
         </AccordionSummary>
         <AccordionDetails>
-
-        <Typography>
+          <Typography>
             Donec placerat, lectus sed mattis semper, neque lectus feugiat
             lectus, varius pulvinar diam eros in elit. Pellentesque convallis
             laoreet laoreet.
           </Typography>
-
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -54,10 +51,8 @@ function FAQ() {
         >
           <Typography sx={{ width: "33%", flexShrink: 0 }}>
             DELIVERY & SHIPPING
-            </Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-
           </Typography>
+          <Typography sx={{ color: "text.secondary" }}></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -79,9 +74,7 @@ function FAQ() {
           <Typography sx={{ width: "33%", flexShrink: 0 }}>
             HOW DOES IT WORK?
           </Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-
-          </Typography>
+          <Typography sx={{ color: "text.secondary" }}></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -114,4 +107,4 @@ function FAQ() {
   );
 }
 
-export default FAQ;
+export default ContactUs;

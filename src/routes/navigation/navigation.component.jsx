@@ -29,6 +29,10 @@ const Navigation = () => {
               MENUS
             </Link>
 
+            <Link className="nav-link" to="/shop">
+              NUTRITIONISTS
+            </Link>
+
             <Link className="nav-link" to="/settings">
               SETTINGS
             </Link>
@@ -54,11 +58,11 @@ const Navigation = () => {
           }}
         >
           <div className="nav-links-container-left">
-            <Link className="nav-link" to="/faq">
+            <Link className="nav-link" to="/how-it-works">
               HOW IT WORKS
             </Link>
 
-            <Link className="nav-link" to="/faq">
+            <Link className="nav-link" to="/rewards-program">
               REWARDS PROGRAM
             </Link>
 
@@ -66,7 +70,7 @@ const Navigation = () => {
               FAQ
             </Link>
 
-            <Link className="nav-link" to="/faq">
+            <Link className="nav-link" to="/contact-us">
               CONTACT US
             </Link>
           </div>

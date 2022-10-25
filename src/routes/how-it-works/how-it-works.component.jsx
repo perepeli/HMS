@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -6,18 +6,18 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-function FAQ() {
-  const [expanded, setExpanded] = React.useState(false);
+function HowItWorks() {
+    const [expanded, setExpanded] = React.useState(false);
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
+    const handleChange = (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    };
 
-  return (
-    <div>
-        <label>FAQ:</label>
-        <br/><br/>
-      <Accordion
+    return (
+        <div>
+            <label>HOW IT WORKS?:</label>
+            <br/><br/>
+            <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
@@ -110,8 +110,9 @@ function FAQ() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </div>
-  );
+        </div>
+        
+    );
 }
 
-export default FAQ;
+export default HowItWorks;

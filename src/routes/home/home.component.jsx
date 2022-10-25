@@ -36,6 +36,17 @@ const Home = () => {
   return (
     <div>
 
+      <div className='background-image' 
+      style={{
+          backgroundImage: `url(${"https://i.ibb.co/MhSrDMK/eiliv-aceron-w0-Jzq-JZYX-E-unsplash.jpg"})`,
+          height: "300px",
+          weight: "200px",
+          border: "1px solid black",
+        }}>
+          <span>BANNER</span>
+          </div>
+        <br/>
+
       <NutritionistsSlider />
       <br/><br/>
       <Directory categories={categories} />
