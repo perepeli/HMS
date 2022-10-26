@@ -29,7 +29,7 @@ const Navigation = () => {
               MENUS
             </Link>
 
-            <Link className="nav-link" to="/shop">
+            <Link className="nav-link" to="/nutritionists">
               NUTRITIONISTS
             </Link>
 
@@ -73,6 +73,7 @@ const Navigation = () => {
             <Link className="nav-link" to="/contact-us">
               CONTACT US
             </Link>
+
           </div>
         </div>
 

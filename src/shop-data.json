@@ -37,19 +37,43 @@
     },
     {
       "id": 7,
-      "name": "Meal Plan #6",
+      "name": "Meal Plan #7",
       "imageUrl": "https://i.ibb.co/QP9nnqC/ella-olsson-l-Mc-Ry-Bx4-G50-unsplash.jpg",
       "price": 18
     },
     {
       "id": 8,
-      "name": "Meal Plan #7",
+      "name": "Meal Plan #8",
       "imageUrl": "https://i.ibb.co/ThpqHLw/ella-olsson-sos-Oqjx31-Go-unsplash.jpg",
       "price": 14
     },
     {
       "id": 9,
-      "name": "Meal Plan #8",
+      "name": "Meal Plan #9",
+      "imageUrl": "https://i.ibb.co/QP9nnqC/ella-olsson-l-Mc-Ry-Bx4-G50-unsplash.jpg",
+      "price": 16
+    },
+    {
+      "id": 10,
+      "name": "Meal Plan #10",
+      "imageUrl": "https://i.ibb.co/ThpqHLw/ella-olsson-sos-Oqjx31-Go-unsplash.jpg",
+      "price": 16
+    },
+    {
+      "id": 11,
+      "name": "Meal Plan #11",
+      "imageUrl": "https://i.ibb.co/QP9nnqC/ella-olsson-l-Mc-Ry-Bx4-G50-unsplash.jpg",
+      "price": 16
+    },
+    {
+      "id": 12,
+      "name": "Meal Plan #12",
+      "imageUrl": "https://i.ibb.co/ThpqHLw/ella-olsson-sos-Oqjx31-Go-unsplash.jpg",
+      "price": 16
+    },
+    {
+      "id": 13,
+      "name": "Meal Plan #13",
       "imageUrl": "https://i.ibb.co/QP9nnqC/ella-olsson-l-Mc-Ry-Bx4-G50-unsplash.jpg",
       "price": 16
     }

@@ -11,12 +11,16 @@ import HowItWorks from './routes/how-it-works/how-it-works.component';
 import RewardsProgram from './routes/rewards-program/rewards-program.component';
 import ContactUs from './routes/contact-us/contact-us.component';
 
+import TestSorting from './routes/test/test-sorting.component';
+import Nutritionists from './routes/nutritionists/nutritionists.component';
+
 const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path='shop' element={<Shop />} />
+        <Route path='nutritionists' element={<Nutritionists />} />
         <Route path='auth' element={<Authentication />} />
 
         <Route path='how-it-works' element={<HowItWorks />} />
