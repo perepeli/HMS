@@ -19,75 +19,39 @@ function NutritionistsSlider() {
       <div>
         <Slider {...settings}>
           <div>
-            <div className="card-image">
-              <img
-                src="https://i.ibb.co/WpFMmVM/julia-rekamie-Z72-Yujn-Orl-Y-unsplash.jpg"
-                className="card-image-content"
-              />
+            <div className="card-image" style={{ backgroundImage: `url("https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg")`}}>
             </div>
           </div>
           <div>
-            <div className="card-image">
-              <img
-                src="https://i.ibb.co/Vm5vM7z/spencer-davis-0-Sh-Ts8i-PY28-unsplash.jpg"
-                className="card-image-content"
-              />
+          <div className="card-image" style={{ backgroundImage: `url("https://i.ibb.co/N9vW0jD/jason-briscoe-5-IGprl-BT5g4-unsplash-2.jpg")`}}>
             </div>
           </div>
           <div>
-            <div className="card-image">
-              <img
-                src="https://i.ibb.co/KF7WJc1/jakob-owens-7t-MKyu-V-9yo-unsplash.jpg"
-                className="card-image-content"
-              />
+          <div className="card-image" style={{ backgroundImage: `url("https://i.ibb.co/M7ymWDm/mike-san-kw-QXWLNMIQs-unsplash.jpg")`}}>
             </div>
           </div>
           <div>
-          <div className="card-image">
-              <img
-                src="https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg"
-                className="card-image-content"
-              />
+          <div className="card-image" style={{backgroundImage: `url("https://i.ibb.co/3zvRtmt/maria-lupan-wtux-J9hn2ms-unsplash.jpg")`}}>
             </div>
           </div>
           <div>
-          <div className="card-image">
-              <img
-                src="https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg"
-                className="card-image-content"
-              />
+          <div className="card-image" style={{backgroundImage: `url("https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg")`}}>
             </div>
           </div>
           <div>
-          <div className="card-image">
-              <img
-                src="https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg"
-                className="card-image-content"
-              />
+          <div className="card-image" style={{backgroundImage: `url("https://i.ibb.co/Zm1QzQN/fortune-vieyra-8f-EMQyt-M2ik-unsplash.jpg")`}}>
             </div>
           </div>
           <div>
-          <div className="card-image">
-              <img
-                src="https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg"
-                className="card-image-content"
-              />
+          <div className="card-image" style={{backgroundImage: `url("https://i.ibb.co/N9vW0jD/jason-briscoe-5-IGprl-BT5g4-unsplash-2.jpg")`}}>
             </div>
           </div>
           <div>
-          <div className="card-image">
-              <img
-                src="https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg"
-                className="card-image-content"
-              />
+          <div className="card-image" style={{backgroundImage: `url("https://i.ibb.co/M7ymWDm/mike-san-kw-QXWLNMIQs-unsplash.jpg")`}}>
             </div>
           </div>
           <div>
-          <div className="card-image">
-              <img
-                src="https://i.ibb.co/XxZm8WT/yilmaz-akin-FPKt-Cl74-Hfs-unsplash.jpg"
-                className="card-image-content"
-              />
+          <div className="card-image" style={{ backgroundImage: `url("https://i.ibb.co/3zvRtmt/maria-lupan-wtux-J9hn2ms-unsplash.jpg")`}}>
             </div>
           </div>
         </Slider>

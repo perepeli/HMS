@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
+import { Pagination } from '@mui/material';
 
+import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import InfoIcon from '@mui/icons-material/Info';
+import IconButton from '@mui/material/IconButton';
 
 import ProductCard from "../../components/product-card/product-card.component";
 
@@ -11,16 +13,24 @@ import { ProductsContext } from "../../contexts/products.context";
 
 import "./shop.styles.scss";
 
+import usePagination from "../../utils/pagination.utils";
 import Sort from "./sort/sort.component";
+import InfoDialog from "./dialog/info-dialog.component";
+import CustomProductCard from "../../components/product-card/custompro-product-card.component";
 
 
 const Shop = () => {
   const { products } = useContext(ProductsContext);
-
+  
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [productsToRender, setProductsToRender] = useState(filteredProducts); //.slice(0, 12));
   const [sortType, setSortType] = useState(0);
-  //const [sortLambda, setSortLambda] = useState(() => sort1);
+
+  const [page, setPage] = useState(1);
+  const PER_PAGE = 12;
+
+  const count = Math.ceil(productsToRender.length / PER_PAGE);
+  const _DATA = usePagination(productsToRender, PER_PAGE);
 
   useEffect(() => {
     const sort0 = (a, b) => (a.id < b.id ? 1 : -1); // id h_l
@@ -62,6 +72,11 @@ const Shop = () => {
     setSortType(newSortType);
   }
 
+  const handlePageChange = (e, p) => {
+    setPage(p);
+    _DATA.jump(p);
+  };
+
   return (
     <div>
       <div
@@ -73,7 +88,13 @@ const Shop = () => {
         }}
       >
         <div>MENUS</div>
-        <div>
+
+        <div style={{
+          padding: "0px 0px 0px 0px",
+          display: "flex",
+          justifyContent: "space-between",
+        }}>
+          <InfoDialog />
           <Sort stateChanger={changeSortType} />
         </div>
       </div>
@@ -81,8 +102,8 @@ const Shop = () => {
 
       <div className="products-container">
         {[
-          ...productsToRender.map((product) => (
-            <ProductCard key={product.id} product={product} />
+          _DATA.currentData().map((product) => (
+            <CustomProductCard key={product.id} product={product} />
           )),
         ]}
       </div>
@@ -93,9 +114,8 @@ const Shop = () => {
           justifyContent: "center",
         }}
       >
-        <Stack spacing={2}>
-          <Pagination count={10} />
-        </Stack>
+
+          <Pagination count={count} shape="rounded" variant="outlined" page={page} onChange={handlePageChange} />
       </div>
     </div>
   );

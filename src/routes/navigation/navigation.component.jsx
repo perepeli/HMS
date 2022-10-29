@@ -7,11 +7,13 @@ import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component
 import { UserContext } from "../../contexts/user.context";
 import { CartContext, CartProvider } from "../../contexts/cart.context";
 
-import { ReactComponent as HmsLogo } from "../../assets/hms-logo.svg";
+//import { ReactComponent as HmsLogo } from "../../assets/hms-logo.svg";
+import { ReactComponent as HmsLogo } from "../../assets/hms-logo-4.svg";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import "./navigation.styles.scss";
 import Footer from "../../components/home/footer/footer.component";
+import AvatarComponent from "../../components/home/avatar/avatar.component";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
@@ -41,11 +43,13 @@ const Navigation = () => {
               <span className="nav-link" onClick={signOutUser}>
                 SIGN OUT
               </span>
+              
             ) : (
               <Link className="nav-link" to="/auth">
                 SIGN IN
               </Link>
             )}
+            <AvatarComponent />
             <CartIcon />
           </div>
           {isCartOpen && <CartDropdown />}

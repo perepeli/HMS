@@ -25,7 +25,7 @@ const defaultFormFields = {
   age: "",
   height: "",
   weight: "",
-  sex: 0,
+  gender: 0,
   activity: 0,
   goal: 0,
 };
@@ -114,19 +114,19 @@ const HealthForm = () => {
             name="weight"
             value={weight}
           />
-          <span>Biological sex: </span>
+          <span>Biological gender: </span>
           <br />
           <br />
 
           <Box sx={{ minWidth: 120 }}>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Sex</InputLabel>
+              <InputLabel id="demo-simple-select-label">Gender</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                name="sex"
-                value={formFields.sex}
-                label="Sex"
+                name="gender"
+                value={formFields.gender}
+                label="Gender"
                 onChange={handleChange}
                 defaultValue={0}
               >

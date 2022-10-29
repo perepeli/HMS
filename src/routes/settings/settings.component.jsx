@@ -7,12 +7,13 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-import AllergensForm from "../../components/forms/health/health-form.component";
+
 
 import "./settings.styles.scss";
 import LocationForm from "../../components/forms/location/location-form.component";
 import MultipleSelect from "../../components/forms/allergens/allergens-form.component";
 import PreferencesForm from "../../components/forms/preferences/preferences-form.component";
+import AllergensForm from "../../components/forms/health/health-form.component";
 
 
 //import LocationForm from "./forms/location/location-form.component";
@@ -53,8 +54,9 @@ const Settings = () => {
         justifyContent: "center",
       }}
     >
+      
       <div>
-        <h2>Settings</h2>
+        
         <div>
           <Accordion
             expanded={expanded === "panel1"}
@@ -125,7 +127,7 @@ const Settings = () => {
             </AccordionSummary>
             <AccordionDetails>
 
-            <PreferencesForm />
+              <PreferencesForm />
 
             </AccordionDetails>
           </Accordion>
