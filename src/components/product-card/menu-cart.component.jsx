@@ -1,7 +1,7 @@
 import { useContext, useState, forwardRef } from "react";
 import { CartContext } from "../../contexts/cart.context";
 
-import "./product-card.styles.scss";
+import "./product-cart.styles.scss";
 
 import Button from "../button/button.component";
 import Box from "@mui/material/Box";
@@ -33,6 +33,8 @@ import Toolbar from "@mui/material/Toolbar";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
 import DetailsDialog from "./product-details/product-details.component";
+import { Grid } from "@mui/material";
+import AddMenuToCartButton from "./add-menu-to-cart-button/add-to-cart-button.component";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -45,7 +47,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-const CustomProductCard = ({ product }) => {
+const MenuCard = ({ product }) => {
   const { addItemToCart } = useContext(CartContext);
 
   const [open, setOpen] = useState(false);
@@ -81,7 +83,7 @@ const CustomProductCard = ({ product }) => {
             <DetailsDialog />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
+        title="Menu Group 1"
         subheader="September 14, 2016"
       />
       <div className="image-div">
@@ -93,12 +95,20 @@ const CustomProductCard = ({ product }) => {
           image={imageUrl}
           alt="Paella dish"
         />
-        <Button buttonType="inverted" onClick={addProductToCart}>
-          Add to card
-        </Button>
+
+        <AddMenuToCartButton product={product} /> {/* ADD TO CART BUTTON */}
+
       </div>
 
       <CardContent>
+        <Grid container justify="space-between">
+          <Typography inline variant="overline" align="left">
+            Price: 65$/week &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203;
+          </Typography>
+          <Typography inline variant="overline" align="right">
+            Calories: 2000/day
+          </Typography>
+        </Grid>
         <Typography variant="body2" color="text.secondary">
           This impressive paella is a perfect party dish and a fun meal to cook
           together with your guests. Add 1 cup of frozen peas along with the
@@ -157,4 +167,4 @@ const CustomProductCard = ({ product }) => {
   );
 };
 
-export default CustomProductCard;
+export default MenuCard;

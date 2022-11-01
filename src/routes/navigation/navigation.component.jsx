@@ -14,10 +14,13 @@ import { signOutUser } from "../../utils/firebase/firebase.utils";
 import "./navigation.styles.scss";
 import Footer from "../../components/home/footer/footer.component";
 import AvatarComponent from "../../components/home/avatar/avatar.component";
+import { ClickAwayListener } from "@mui/material";
+import { Box } from "@mui/system";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartContext);
+
 
   return (
     <div>
@@ -49,7 +52,9 @@ const Navigation = () => {
                 SIGN IN
               </Link>
             )}
-            <AvatarComponent />
+            {currentUser && <AvatarComponent/>}
+            
+
             <CartIcon />
           </div>
           {isCartOpen && <CartDropdown />}

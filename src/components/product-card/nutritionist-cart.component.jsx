@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { CartContext } from '../../contexts/cart.context';
 
-import './product-card.styles.scss';
+import './product-cart.styles.scss';
 
 import Button from '../button/button.component';
 import Box from '@mui/material/Box';
@@ -9,7 +9,9 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 
 
-const ProductCard = ({ product }) => {
+
+
+const NutritionistCard = ({ product }) => {
   const { name, price, imageUrl } = product;
   const { addItemToCart } = useContext(CartContext);
 
@@ -26,9 +28,9 @@ const ProductCard = ({ product }) => {
         <span className='price'>{price}</span>
       </div>
       
-      <Button buttonType='inverted' onClick={addProductToCart} style={{border: "1px solid black"}}>Add to card</Button>
+      <Button buttonType='inverted' onClick={addProductToCart} style={{border: "1px solid black"}}>Add to cart</Button>
     </div>
   );
 };
 
-export default ProductCard;
+export default NutritionistCard;

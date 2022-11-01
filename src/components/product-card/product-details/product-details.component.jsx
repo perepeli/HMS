@@ -13,6 +13,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
 
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import MenuGroupAccordion from './menu-group-accordion/menu-group-accordion';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -50,25 +51,14 @@ export default function ProductDetailsIcon() {
               <CloseIcon />
             </IconButton>
             <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-              Menu Details
+              Menu Group Details
             </Typography>
             <Button autoFocus color="inherit" onClick={handleClose}>
-              save
+              ok
             </Button>
           </Toolbar>
         </AppBar>
-        <List>
-          <ListItem button>
-            <ListItemText primary="Calories" secondary="2000" />
-          </ListItem>
-          <Divider />
-          <ListItem button>
-            <ListItemText
-              primary="Price"
-              secondary="20"
-            />
-          </ListItem>
-        </List>
+        <MenuGroupAccordion />
       </Dialog>
     </div>
   );

@@ -6,10 +6,13 @@ import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
+import { Link, useNavigate } from 'react-router-dom';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function AvatarComponent() {
+    const nav = useNavigate();
+    
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenUserMenu = (event) => {
@@ -19,6 +22,8 @@ function AvatarComponent() {
       const handleCloseUserMenu = () => {
         setAnchorElUser(null);
       };
+
+      
 
     return (
         <div>
@@ -45,10 +50,15 @@ function AvatarComponent() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
+                
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
+                
+              <Link className="nav-link" to="/auth">
+                Logout
+              </Link>
             </Menu>
         </div>
         

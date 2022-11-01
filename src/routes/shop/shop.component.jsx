@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import InfoIcon from '@mui/icons-material/Info';
 import IconButton from '@mui/material/IconButton';
 
-import ProductCard from "../../components/product-card/product-card.component";
+import MenuCard from "../../components/product-card/menu-cart.component";
 
 import { ProductsContext } from "../../contexts/products.context";
 
@@ -16,7 +16,6 @@ import "./shop.styles.scss";
 import usePagination from "../../utils/pagination.utils";
 import Sort from "./sort/sort.component";
 import InfoDialog from "./dialog/info-dialog.component";
-import CustomProductCard from "../../components/product-card/custompro-product-card.component";
 
 
 const Shop = () => {
@@ -103,7 +102,7 @@ const Shop = () => {
       <div className="products-container">
         {[
           _DATA.currentData().map((product) => (
-            <CustomProductCard key={product.id} product={product} />
+            <MenuCard key={product.id} product={product} />
           )),
         ]}
       </div>

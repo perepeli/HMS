@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import InfoIcon from '@mui/icons-material/Info';
 import IconButton from '@mui/material/IconButton';
 
-import ProductCard from "../../components/product-card/product-card.component";
+import NutritionistCard from "../../components/product-card/nutritionist-cart.component";
 
 import { NutritionistsContext } from "../../contexts/nutritionists.context";
 
@@ -104,7 +104,7 @@ const Nutritionists = () => {
       <div className="nutritionists-container">
         {[
           _DATA.currentData().map((nutritionist) => (
-            <ProductCard key={nutritionist.id} product={nutritionist} />
+            <NutritionistCard key={nutritionist.id} product={nutritionist} />
           )),
         ]}
       </div>

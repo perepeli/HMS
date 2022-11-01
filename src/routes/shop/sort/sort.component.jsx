@@ -59,8 +59,8 @@ export default function Sort({ stateChanger }) {
               >
                 <option value={0}>Featured</option>
                 <option value={1}>Best selling</option>
-                <option value={2}>Alphabetically A-Z</option>
-                <option value={3}>Alphabetically Z-A</option>
+                <option value={2}>Calories: High to low</option>
+                <option value={3}>Calories: Low to high</option>
                 <option value={4}>Price: High to low</option>
                 <option value={5}>Price: Low to high</option>
                 <option value={6}>Date: New to old</option>
