@@ -21,6 +21,17 @@ const firebaseConfig = {
   measurementId: "G-RGSK927QGK"
 };
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCyPZ1A9a3tlfEiAK4tIMhr2xmEHJUg-84",
+//   authDomain: "healty-meal.firebaseapp.com",
+//   databaseURL: "https://healty-meal-default-rtdb.firebaseio.com",
+//   projectId: "healty-meal",
+//   storageBucket: "healty-meal.appspot.com",
+//   messagingSenderId: "257768313354",
+//   appId: "1:257768313354:web:6468d345b1d9d664d885f3",
+//   measurementId: "G-G7KLYX47SY"
+// };
+
 const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();

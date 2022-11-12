@@ -34,7 +34,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
 import DetailsDialog from "./product-details/product-details.component";
 import { Grid } from "@mui/material";
-import AddMenuToCartButton from "./add-menu-to-cart-button/add-to-cart-button.component";
+import AddMenuToCartButton from "./add-menu-to-cart-button/add-menu-to-cart-button.component";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;

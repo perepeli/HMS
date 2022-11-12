@@ -28,6 +28,19 @@
   }
 }
 
+.nutritionist-div {
+  button {
+    width: 40%;
+    opacity: 0.7;
+    position: absolute;
+    display: none;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
 .product-card-container {
     width: 100%;
     display: flex;

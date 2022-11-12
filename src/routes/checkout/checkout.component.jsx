@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { CartContext } from '../../contexts/cart.context';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+import PaymentForm from '../../components/payment-form/payment-form.component';
 
 import './checkout.styles.scss'
 import Button from '../../components/button/button.component';
@@ -39,12 +40,18 @@ const Checkout = () => {
                 {cartItems.map((cartItem) => (
                     <CheckoutItem key={cartItem.id} cartItem={cartItem} />
                 ))}
-                
-                {(cartItems.length > 0) && 
-                    <div style={{display: "flex", justifyContent: "space-between",}}>
+                {/*<div style={{display: "flex", justifyContent: "space-between",}}>
                         <div><span className='total'>Total: ${cartTotal}</span></div>
                         <Button>CHECKOUT</Button>
+                        <PaymentForm/>
+                        <Total>Total: ${cardTotal}</Total>
                     </div>
+                    */}
+                {(cartItems.length > 0) && 
+                    
+                
+                <PaymentForm/>
+                    
                 } 
                 
                 
