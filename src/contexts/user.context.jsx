@@ -13,7 +13,7 @@ export const UserContext = createContext({
 
 export const UserProvider = ({ children }) => {
   {/*  */}
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null); // USER STATE
   const value = { currentUser, setCurrentUser };
 
   useEffect(() => {
@@ -22,6 +22,7 @@ export const UserProvider = ({ children }) => {
         createUserDocumentFromAuth(user);
       }
       setCurrentUser(user);
+      console.log(user);// LOG
     });
 
     return unsubscribe;

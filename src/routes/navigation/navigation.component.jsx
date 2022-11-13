@@ -42,16 +42,11 @@ const Navigation = () => {
               SETTINGS
             </Link>
 
-            {currentUser ? (
-              <span className="nav-link" onClick={signOutUser}>
-                SIGN OUT
-              </span>
-              
-            ) : (
+            {!currentUser &&
               <Link className="nav-link" to="/auth">
                 SIGN IN
               </Link>
-            )}
+            }
             {currentUser && <AvatarComponent/>}
             
 

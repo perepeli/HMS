@@ -7,21 +7,28 @@ import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import { Link, useNavigate } from 'react-router-dom';
+import { UserContext } from '../../../contexts/user.context';
+import { signOutUser } from '../../../utils/firebase/firebase.utils';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function AvatarComponent() {
+    const { currentUser } = React.useContext(UserContext);
     const nav = useNavigate();
     
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-      };
+        setAnchorElUser(event);
+    };
 
-      const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-      };
+    const handleCloseUserMenu = () => {
+      setAnchorElUser(null);
+    };
+
+    const hadnleLogOut = () => {
+      signOutUser();
+    };
 
       
 
@@ -30,7 +37,7 @@ function AvatarComponent() {
             
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar>H</Avatar>
+              <Avatar>{currentUser.displayName.charAt(0)}</Avatar>
               </IconButton>
             </Tooltip>
             <Menu
@@ -49,16 +56,34 @@ function AvatarComponent() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
                 
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-                
-              <Link className="nav-link" to="/auth">
-                Logout
-              </Link>
+              {settings.map((setting) => {
+                if(setting === "Profile") {
+                  return <MenuItem key={setting} onClick={handleCloseUserMenu}> 
+                          <Typography textAlign="center">{setting}</Typography>
+                        </MenuItem>
+                }
+                else if(setting === "Account") {
+                  return <MenuItem key={setting} onClick={handleCloseUserMenu}> 
+                          <Typography textAlign="center">{setting}</Typography>
+                        </MenuItem>
+                }
+                else if(setting === "Dashboard") {
+                  return <MenuItem key={setting} onClick={handleCloseUserMenu}> 
+                          <Typography textAlign="center">{setting}</Typography>
+                        </MenuItem>
+                }
+                else if(setting === "Logout") {
+                  return <MenuItem key={setting} onClick={hadnleLogOut}> 
+                          <Typography textAlign="center">{setting}</Typography>
+                        </MenuItem>
+                }
+                else {
+                  return <MenuItem key={setting}> {/* onClick={handleCloseUserMenu}> */} 
+                          <Typography textAlign="center" onClick={handleCloseUserMenu}>{setting}</Typography>
+                        </MenuItem>
+                }
+              })}
             </Menu>
         </div>
         
