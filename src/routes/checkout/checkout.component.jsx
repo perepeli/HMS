@@ -40,6 +40,7 @@ const Checkout = () => {
                 {cartItems.map((cartItem) => (
                     <CheckoutItem key={cartItem.id} cartItem={cartItem} />
                 ))}
+                <div><span className='total'>Total: ${cartTotal}</span></div>
                 {/*<div style={{display: "flex", justifyContent: "space-between",}}>
                         <div><span className='total'>Total: ${cartTotal}</span></div>
                         <Button>CHECKOUT</Button>
@@ -48,8 +49,6 @@ const Checkout = () => {
                     </div>
                     */}
                 {(cartItems.length > 0) && 
-                    
-                
                 <PaymentForm/>
                     
                 } 

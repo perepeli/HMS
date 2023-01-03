@@ -26,7 +26,7 @@ function AvatarComponent() {
       setAnchorElUser(null);
     };
 
-    const hadnleLogOut = () => {
+    const handleLogout = () => {
       signOutUser();
     };
 
@@ -74,7 +74,7 @@ function AvatarComponent() {
                         </MenuItem>
                 }
                 else if(setting === "Logout") {
-                  return <MenuItem key={setting} onClick={hadnleLogOut}> 
+                  return <MenuItem key={setting} onClick={handleLogout}> 
                           <Typography textAlign="center">{setting}</Typography>
                         </MenuItem>
                 }

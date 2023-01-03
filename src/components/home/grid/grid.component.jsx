@@ -50,7 +50,7 @@ export default function MenuGrid() {
       >
         {gridData.map((e) => (
           <Grid item xs={2} sm={4} md={4} key={e.index}>
-            <Item>
+            <Item id="1">
               <div
                 style={{
                     backgroundImage: `url(${e.imageUrl})`,

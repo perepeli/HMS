@@ -48,7 +48,7 @@ export const signInWithGoogleRedirect = () =>
 
 export const db = getFirestore();
 
-export const createUserDocumentFromAuth = async (
+export const createUserDocumentFromAuth = async ( // 
   userAuth,
   additionalInformation = {}
 ) => {
@@ -73,9 +73,14 @@ export const createUserDocumentFromAuth = async (
       console.log('error creating the user', error.message);
     }
   }
-
   return userDocRef;
 };
+
+const checkIfExists = () => { //
+  console.log(fetch('http://34.168.174.35/services/hmscontact/api/contacts'));
+} 
+
+
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;

@@ -38,6 +38,21 @@ export const UserProvider = ({ children }) => {
     } else {
       nav("/");
     }
+    
+    fetch(
+      'http://34.168.174.35/services/hmscontact/api/contacts',
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'http://127.0.0.1:3000',
+          'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTY3MDk1MTA0MH0.ImTx-u_sLEonLeMa3KslAPw5KaaJHepOHF7e7Yt1wmmDJsZ5yeTyAYH7vVbZbTo13zIdRaJkWrvKfAbA1KXLSA'
+        }
+      }
+    ).then(response => {
+      console.log(response);
+    });
+
   }, [currentUser])
 
 

@@ -1,8 +1,150 @@
 [
-    {
-      "id": 1,
-      "name": "Meal Plan #1",
-      "imageUrl" : "https://i.ibb.co/ThpqHLw/ella-olsson-sos-Oqjx31-Go-unsplash.jpg",
-      "price": 25
+  {
+    "id": 1351,
+    "nutritionistId": 1,
+    "name": "Menu Group1",
+    "cost": 75.0,
+    "salesPrice": 130.0,
+    "explanation": null,
+    "goal": "LOSEFAT",
+    "bodyType": "LOW",
+    "activityLevelMin": 5,
+    "activityLevelMax": 7,
+    "weightMin": 50.0,
+    "weightMax": 80.0,
+    "dailyKcalMin": 1000.0,
+    "dailyKcalMax": 1500.0,
+    "targetWeightMin": 50.0,
+    "targetWeightMax": 70.0,
+    "unit": "KG",
+    "createdDate": null,
+    "ingradients": [
+        {
+            "id": 1105,
+            "name": "Squash",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        },
+        {
+            "id": 1121,
+            "name": "Pepper",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        },
+        {
+            "id": 1138,
+            "name": "Parmesan cheese",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        },
+        {
+            "id": 1123,
+            "name": "Mint Pepper",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        },
+        {
+            "id": 1108,
+            "name": "Cinnamon",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        },
+        {
+            "id": 1109,
+            "name": "Green Beans",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        },
+        {
+            "id": 1112,
+            "name": "Garlic",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        },
+        {
+            "id": 1101,
+            "name": "Avocado",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        },
+        {
+            "id": 1103,
+            "name": "Almond",
+            "createdDate": null,
+            "imagesUrls": [],
+            "nutriens": null
+        }
+    ],
+    "menus": [
+        {
+            "id": 1301,
+            "name": "Vegeterian Menu1",
+            "menuDay": null,
+            "menuTime": null,
+            "nutritionistId": null,
+            "cost": null,
+            "salesPrice": null,
+            "explanation": null,
+            "createdDate": null,
+            "imagesUrls": [],
+            "meals": [],
+            "nutriens": null
+        },
+        {
+            "id": 1302,
+            "name": "Vegeterian Menu2",
+            "menuDay": null,
+            "menuTime": null,
+            "nutritionistId": null,
+            "cost": null,
+            "salesPrice": null,
+            "explanation": null,
+            "createdDate": null,
+            "imagesUrls": [],
+            "meals": [],
+            "nutriens": null
+        },
+        {
+            "id": 1303,
+            "name": "Vegeterian Menu3",
+            "menuDay": null,
+            "menuTime": null,
+            "nutritionistId": null,
+            "cost": null,
+            "salesPrice": null,
+            "explanation": null,
+            "createdDate": null,
+            "imagesUrls": [],
+            "meals": [],
+            "nutriens": null
+        }
+    ],
+    "imagesUrls": [
+        {
+            "id": 1466,
+            "name": "Green Salad with Blue Cheese, Feta, and Blueberries",
+            "urlAddress": null,
+            "explanation": null,
+            "type": null,
+            "createdDate": null
+        }
+    ],
+    "nutriens": {
+        "id": 1051,
+        "name": "Avacado",
+        "protein": null,
+        "carb": null,
+        "fat": null,
+        "kcal": null,
+        "createdDate": null
     }
+}
   ]
